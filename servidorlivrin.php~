@@ -2,7 +2,8 @@
 
 	include_once 'livro.class.php';
 	
+	$livro = new Livro($_REQUEST['titulo'], $_REQUEST['nomeautor']);
 	
-	
+	$livro->echo_dados();
 	
 ?>

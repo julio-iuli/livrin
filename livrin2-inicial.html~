@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1; text/html; charset=utf-8" charset="UTF-8" >
+		<link rel="stylesheet" href="css/w3.css">
+	<head>
+	
+	<script type="text/javascript" src="js/livrin.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.12.0/jquery-ui.min.js"></script>	
+	<link rel="stylesheet" href="js/jquery-ui-1.12.0/jquery-ui.min.css">
+	<script type="text/javascript">
+		$(function () {
+			$("a").addClass("w3-btn");
+		});
+	</script>
+	
+	<body class="w3-container">
+	
+		<div class="w3-blue w3-animate-zoom">
+			<h1>LIVRIN - INÍCIO<h1>
+		</div>
+		<div>
+			<p><a href="livrin2-inserir-livro.php">NOVO LIVRO</a></p>
+			<p><a href="livrin2-inserir-dono">NOVO DONO</a></p>
+			<p><a href="livrin2-inserir-editora">NOVA EDITORA</a></p>
+			<p><a href="livrin2-consultas">CONSULTAS</a></p>
+			<p><a href="livrin2-relatorios">RELATÓRIOS</a></p>
+		</div>
+
+		
+	</body>
+</html>
