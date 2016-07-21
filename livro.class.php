@@ -1,17 +1,26 @@
 <?php
 	class Livro {
+		
+		private $idlivro;
 		public $titulo;
 		public $autor;
 		public $editora;
 		public $ano_publicacao;
 		public $dono;
 		
-		function __construct ($tit, $aut, $edi, $ano, $don) {
+		function __construct ($id, $tit, $aut, $edi, $ano, $don) {
+			$this->idlivro = $id;
 			$this->titulo = $tit;
 			$this->autor = $aut;
 			$this->editora = $edi;
 			$this->ano_publicacao = $ano;
 			$this->dono = $don;
+		}
+		
+		function __construct ($tit, $aut, $edi) {
+			$this->titulo = $tit;
+			$this->autor = $aut;
+			$this->editora = $edi;
 		}
 		
 		function echo_dados(){
