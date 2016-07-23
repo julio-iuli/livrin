@@ -22,7 +22,7 @@
 		</div>
 		<div>
 			<p><a href="livrin2-inserir-livro.php">NOVO LIVRO</a></p>
-			<p><a href="livrin2-inserir-dono">NOVO DONO</a></p>
+			<p><a href="livrin2-inserir-dono.php">NOVO DONO</a></p>
 			<p><a href="livrin2-inserir-editora">NOVA EDITORA</a></p>
 			<p><a href="livrin2-consultas">CONSULTAS</a></p>
 			<p><a href="livrin2-relatorios">RELATÓRIOS</a></p>
