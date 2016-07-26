@@ -8,8 +8,8 @@
 				<form accept-charset="utf-8" method="GET">
 					<input id="entrada'.$tab.'" type="text" name="novodado">
 					<br><br>
-					<input id = "salvar" type="button" value="Salvar">
-					
+					<input id = "salvar" type="button" value="SALVAR">
+					<br><br>
 					<input id="hidden'.$tab.'" type="hidden" name="muda'.$tab.'" disabled>
 					<input type="hidden" name="tab" value="'.$tab.'" >
 					<input type="hidden" name="nometab" value="nome'.$tab.'" >

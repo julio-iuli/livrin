@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1; text/html; charset=utf-8" charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 		<link rel="stylesheet" href="css/w3.css">
 	<head>
 	
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.12.0/jquery-ui.min.js"></script>	
-	<link rel="stylesheet" href="js/jquery-ui-1.12.0/jquery-ui.min.css">
+	<script type="text/javascript" src="js/jquery-ui.js"></script>	
+	<link rel="stylesheet" href="js/jquery-ui.css">
 	<script type="text/javascript">
 		var dados;
 		$(function(){
@@ -23,6 +23,7 @@
 					alert('não gravar');
 				}
 			});
+			
 		});
 	</script>
 	
@@ -48,7 +49,7 @@
 		<p>
 			<label>Editora</label>
 			<input id="inputeditora" class="w3-input" type="text" name="nomeeditora" size=100 maxlength=255>
-			<input id="inputeditorarhidden" type="hidden" name="ideditora">
+			<input id="inputeditorahidden" type="hidden" name="ideditora">
 		</p>
 		
 		<p>
@@ -74,4 +75,9 @@
 		
 		
 	</body>
+	<?php
+		include_once 'trata_autocomplete.php';
+		trata_autocomplete('editora');
+		trata_autocomplete('autor');
+	?>
 </html>
