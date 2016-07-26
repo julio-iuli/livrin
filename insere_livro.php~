@@ -1,0 +1,37 @@
+<?php
+	foreach($_REQUEST as $pos => $n){
+		if($n == ''){$n = null;}
+		${$pos} = $n;
+		//echo "$pos => $n \n";
+	}
+
+// resolver quando a gente passa uma editora em branco, fica null, ele vai entender como editora nova
+	
+	if(($idautor == null) && ($ideditora == null) ) {
+		echo "autor e editora novos";
+		
+	}
+	
+	if(($idautor != null) && ($ideditora == null) ) {
+		echo "editora nova ou null";
+	}
+	
+	if(($idautor == null) && ($ideditora != null)) {
+		echo "autor novo";
+	}
+	
+	if(($idautor != null) && ($ideditora != null)) {
+		//echo "autor e editora já existentes no banco de dados \n";
+		$anopublicacao = ($anopublicacao==null) ? 'null' : $anopublicacao;
+		$iddono = ($iddono==null) ? 'null' : $iddono;
+		$query = "insert into livro(titulo, autor_idautor, editora_ideditora, anopublicacao, dono_iddono) value('$titulo', $idautor, $ideditora, $anopublicacao, $iddono);";
+		//echo $query;
+		try{
+			include_once 'conectalivrin.php';
+			if($con->query($query)){echo 'dados salvos com sucesso!!';}			
+		} catch (PDOException $e){
+			echo $e->getMessage();
+		}
+	}
+?>
+
