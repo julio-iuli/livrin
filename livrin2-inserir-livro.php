@@ -14,7 +14,7 @@
 			$("#gravar").click(function(){
 				dados = $("#formlivro").serialize();
 				if(confirm(dados)){
-					var envio = "servidorlivrin.php?" + dados;
+					var envio = "insere_livro.php?" + dados;
 					$.get(envio, function(data){
 						alert(data);
 					});
