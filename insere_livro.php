@@ -11,16 +11,21 @@
 	} else	
 
 	if(($idautor == null) && ($ideditora == null) ) {
-		echo "autor e editora novos";
+		echo "autor e editora nova ou null \n ";
+		$anopublicacao = ($anopublicacao==null) ? 'null' : $anopublicacao;
+		$iddono = ($iddono==null) ? 'null' : $iddono;
+		$tratoeditora = ($nomeeditora==null) ? "set @editoranova := null;" : "INSERT INTO editora(nomeeditora) value('$nomeeditora'); @ideditoranova := last_insert_id();";
+		$query = "INSERT INTO autor(nomeautor) value('$nomeautor'); set @idautornovo := last_insert_id(); $tratoeditora INSERT INTO livro(titulo, autor_idautor, editora_ideditora, anopublicacao, dono_iddono) value('$titulo', @idautornovo, @ideditoranova, $anopublicacao, $iddono);";
+		echo $query;
 		
 	} else
 	
 	if(($idautor != null) && ($ideditora == null) ) {
-		echo "editora nova ou null";
+		echo "autor já registrado e editora nova ou null";
 	} else
 	
 	if(($idautor == null) && ($ideditora != null)) {
-		echo "autor novo";
+		echo "autor novo e editora já registrada";
 	} else
 	
 	if(($idautor != null) && ($ideditora != null)) {
