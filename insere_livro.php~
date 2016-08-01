@@ -34,8 +34,6 @@
 		try {
 			$con->query($query);
 			echo "dados do livro salvos! \n $query";
-		} catch (PDOException $e){
-			echo $e->getMessage();
 		}
 		
 	}

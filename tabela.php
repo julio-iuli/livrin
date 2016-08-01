@@ -16,7 +16,7 @@
 					
 					
 				</form>
-			<a href="livrin2-inicial.html">VOLTAR</a>
+			<a href="index.html">VOLTAR</a>
 		</fieldset>
 		<table class="w3-table-all">
 			<thead>
@@ -58,8 +58,8 @@
 				$("#salvar").click(function(){
 					var dados = $("form").serialize();
 					var seg = "tabela_insere.php?" + dados;
-					$.get(seg, function(){
-						alert("nome inserido com sucesso");
+					$.get(seg, function(data){
+						alert("nome inserido com sucesso! id: " + data);
 						location.reload();
 					});
 				});

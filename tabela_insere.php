@@ -7,6 +7,8 @@
 	include_once 'conectalivrin.php';
 	try {
 		$con->query($query);
+		$testeid = $con->lastInsertId();
+		echo $testeid;
 	} catch (PDOException $e) {
 			echo '<script type="text/javascript">alert("' . $e->getMessage() . '");</script>';
 	}

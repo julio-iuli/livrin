@@ -18,7 +18,7 @@
 					$.get(envio, function(data){
 						alert(data);
 						location.reload();
-						$("#formlivro").trigger('reset');
+						$("input").trigger('reset');
 					});
 					
 				} else {
