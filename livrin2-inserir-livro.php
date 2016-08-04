@@ -58,12 +58,16 @@
 			<label>Ano</label>
 			<input id="inputautor" class="w3-input" type="text" name="anopublicacao" size=100 maxlength=255>			
 		</p>
-		
-		<input class="w3-radio" type="radio" name="iddono" value="1" checked>
-		<label class="w3-validate">Júlio</label>
-		
-		<input class="w3-radio" type="radio" name="iddono" value="2" >
-		<label class="w3-validate">Carlos</label>
+		<?php
+			include_once 'conectalivrin.php';
+			$res = $con->query("SELECT iddono, nomedono FROM dono");
+			while($row = $res->fetch(PDO::FETCH_ASSOC)){
+				echo "<input class='w3-radio' type='radio' name='iddono' value='".$row['iddono']."'";
+				if($row['nomedono']=="Julio"){echo "checked";};
+				echo ">
+				<label class='w3-validate'>".$row['nomedono']."</label> ";
+			}
+		?>
 
 		<input class="w3-radio" type="radio" name="iddono" value="" >
 		<label class="w3-validate">Indefinido</label>
